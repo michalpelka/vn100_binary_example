@@ -2,6 +2,8 @@
 #include "vn100_parsing.h"
 #include <iostream>
 #include "Hexdump.hpp"
+#include <BoostSerial.h>
+
 vn100_client::vn100_client(const std::string& portname, int baudrate)
     : portname(portname)
     , baudrate(baudrate)

@@ -4,8 +4,8 @@
 #include <mutex>
 #include <atomic>
 #include <chrono>
-#include <BoostSerial.h>
-
+#include <vector>
+#include <functional>
 
 class vn100_client {
 public:

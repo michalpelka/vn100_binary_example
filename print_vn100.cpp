@@ -7,7 +7,7 @@ int main(int argc, char **argv) {
 
   std::string port = "/dev/ttyUSB0";
   std::string csv_file = "imu_data.csv";
-  double ts = 0.0;
+  double ts = 10.0;
   if (argc > 1) {
     port = argv[1];
   }
