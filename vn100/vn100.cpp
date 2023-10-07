@@ -119,3 +119,14 @@ void vn100_client::vn100_client_monitor_thread_worker(){
         msgs.store(0);
     }
 }
+vn100_client::~vn100_client()
+{
+	done = true;
+	if (listner_thread.joinable()){
+		listner_thread.join();
+	};
+	if(monitor_thread.joinable()){
+		monitor_thread.join();
+	}
+}
+

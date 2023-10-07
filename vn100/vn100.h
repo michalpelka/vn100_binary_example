@@ -10,7 +10,7 @@
 class vn100_client {
 public:
     const std::vector<uint8_t> header_expected1{0xFA, 0x01}; // Heder with hello and 1st group activated;
-
+	virtual ~vn100_client();
     using DataHandlerType=std::function<void(double,std::array<float,4>,std::array<float,3>,std::array<float,3>)>;
     vn100_client(const std::string& portname, int baudrate=230400);
     std::string getReport() const;
