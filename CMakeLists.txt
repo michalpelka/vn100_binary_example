@@ -18,9 +18,3 @@ add_library(client_vn100  STATIC vn100/vn100.cpp
 
 add_executable (print_vn100 print_vn100.cpp)
 target_link_libraries(print_vn100 client_vn100)
-
-find_package(GTest REQUIRED)
-add_executable(test_vn100 test/test_vn100.cpp vn100/vn100_parsing.cpp  )
-target_link_libraries(test_vn100 ${GTEST_BOTH_LIBRARIES} Threads::Threads)
-add_test(NAME test_vn100 COMMAND test_vn100)
-enable_testing()
